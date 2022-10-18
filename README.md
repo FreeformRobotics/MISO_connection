@@ -6,7 +6,7 @@ This repository contains algorithms such as IM and TBB mentioned in the article 
 This README file briefly introduces the meaning of each python file to reproduce statistical results of experimental data. 
 
 **To Do**
-
+The next commit will restructure the code into an installable python package. 
 
 **The content is described as follows:**
 
