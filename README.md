@@ -7,7 +7,7 @@ This README file briefly introduces the meaning of each python file to reproduce
 
 **To Do**
 
-The next commit will remove some non-functional code and reorganize the code into a python package that can be installed.
+The next commit will remove some non-functional code and reorganize the code into a python package that can be easily installed.
 
 **The content is described as follows:**
 
