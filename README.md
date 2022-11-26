@@ -18,6 +18,7 @@ The next commit will remove some non-functional code and reorganize the code int
 │   ├── data_generation: The code used to generate the original data in the"/data/Matrix" folder  <br/>
 │   ├── enumerate_configuration_space: Method of enumerating configuration space  <br/>
 │   ├── example_human: The example in section VI.B of the article  <br/>
+│   ├── motion planning: The code for the motion example in zero gravity  <br/>
 │   └── other_algorithms：Other methods proposed by other articles.   <br/>
 
 This code will generate the following folder on the local computer for storing intermediate data or results.
