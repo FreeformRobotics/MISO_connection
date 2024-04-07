@@ -34,19 +34,21 @@ class POINTER_Pairing():
 
         Bipartite_Graph.add_nodes_from(A_CNL, bipartite=0)
         Bipartite_Graph.add_nodes_from(B_CNL, bipartite=1)
-
-        # normal=[]
-        # for mod in A_CNL:
-        #     for vac in B_CNL:
-        #         normal.append(abs(mod.pointer-vac.pointer))
-        # normal_max=max(max(normal), 1)
-        # Add edges with weights
+        #mapping to small integers with the same sequence
+        # because bipartite matching in scipy can not deal with big integers.
+        normal=[]
         for mod in A_CNL:
             for vac in B_CNL:
-                w = abs(mod.pointer - vac.pointer)
-                if len(str(w))>300:#cut the length of int in order to transfer to float due to the precision limitation of python
-                    w=int(str(w)[0:300])
-                Bipartite_Graph.add_edge(mod, vac, weight= w)
+                normal.append((abs(mod.pointer-vac.pointer), mod, vac))
+        normal.sort(key=lambda elem:elem[0])
+        # Add edges with weights
+        mapped_weight = 0
+        previous_weight = 0
+        for pair in normal:
+            if previous_weight != pair[0]:
+                previous_weight = pair[0]
+                mapped_weight += 1
+            Bipartite_Graph.add_edge(pair[1], pair[2], weight= mapped_weight)
         # Obtain the minimum weight full matching
         my_matching = nx.algorithms.bipartite.matching.minimum_weight_full_matching(Bipartite_Graph, B_CNL, "weight")
 
