@@ -1,5 +1,8 @@
 # MISO_connection
 
+The connection planning algorithms for modular self-reconfiguration robots composed of Multiple In-degree Single Out-degree (MISO) modules. 
+
+Please check the "package" branch to download the packaged IM algorithm and TBB algorithm, and install the Python package as below: 
  ```
 git clone -b package https://github.com/FreeformRobotics/MISO_connection
 cd MISO_connection
