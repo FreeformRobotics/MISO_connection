@@ -11,7 +11,10 @@ pip install -e .
 The basic usage in the Python script is: 
  ```
 from MISO_planning import MISO_planning
-D, error=MISO_planning(I, F)
+from MISO_planning.IM.utils import Matrix_gen
+I=Matrix_gen(10)
+F=Matrix_gen(10)
+D,e=MISO_planning(I, F)
  ```
 where $I$ and $F$ are the input adjacency matrices of the initial configuration and the final configuration. $D$ is the Difference matrix. 
 
