@@ -8,8 +8,14 @@ git clone -b package https://github.com/FreeformRobotics/MISO_connection
 cd MISO_connection
 pip install -e .
  ```
-This code currently can only handle the connection relationship or adjacency matrix of MISO modules. The input adjacency matrices of the initial configuration and the final configuration should satisfy the requirement that each row has only one '1'.
+The basic usage in the Python script is: 
+ ```
+from MISO_planning import MISO_planning
+D, error=MISO_planning(I, F)
+ ```
+where $I$ and $F$ are the input adjacency matrices of the initial configuration and the final configuration. $D$ is the Difference matrix. 
 
+This code currently can only handle the connection relationship or adjacency matrix of MISO modules. $I$ and $F$ should satisfy the requirement that each row has only one '1'.
 
 # History
 
