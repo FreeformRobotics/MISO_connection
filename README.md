@@ -1,13 +1,17 @@
 # MISO_connection
 
+ ```
+git clone -b package https://github.com/FreeformRobotics/MISO_connection
+cd MISO_connection
+pip install -e .
+ ```
+
+# History
 
 This repository contains algorithms such as IM and TBB mentioned in the article "Auto-Optimizing Connection Planning Method for Chain-Type Modular Self-Reconfiguration Robots", which are applied to the connection planning problem of configurations composed of MISO modules. 
 
-This README file briefly introduces the meaning of each python file to reproduce statistical results of experimental data. 
+This README file briefly introduces the meaning of each Python file to reproduce statistical results of experimental data. 
 
-**To Do**
-
-The next commit will remove some non-functional code and reorganize the code into a python package that can be easily installed.
 
 **The content is described as follows:**
 
