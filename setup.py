@@ -4,7 +4,6 @@ VERSION = '0.0.1'
 DESCRIPTION = "Connection planning for MISO modules"
 LONG_DESCRIPTION = 'The connection planning algorithms for modular self-reconfiguration robots composed of Multiple In-degree Single Out-degree (MISO) modules'
 
-# 配置
 setup(
     name="MISO_planning",
     version=VERSION,
